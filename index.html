@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FUCK U Animation</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-family: monospace;
+  }
+  #anim {
+    white-space: pre;
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.2;
+  }
+</style>
+</head>
+<body>
+<pre id="anim"></pre>
+<script>
+const frames = [
+`FFFFFF  U   U  CCCCC  K   K     U   U
+F       U   U C       K  K      U   U
+FFF     U   U C       KKK       U   U
+F       U   U C       K  K      U   U
+F        UUU   CCCCC  K   K      UUU `,
+` FFFFFF  U   U  CCCCC  K   K     U   U
+F       U   U C       K  K      U   U
+FFF     U   U C       KKK       U   U
+F       U   U C       K  K      U   U
+F        UUU   CCCCC  K   K      UUU `
+];
+
+let i = 0;
+function animate() {
+  document.getElementById('anim').textContent = frames[i];
+  i = (i + 1) % frames.length;
+}
+setInterval(animate, 500);
+</script>
+</body>
+</html>
